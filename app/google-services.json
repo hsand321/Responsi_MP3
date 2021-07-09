@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "168213763346",
+    "project_id": "responsi-mp3",
+    "storage_bucket": "responsi-mp3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168213763346:android:d7260452b6eb6f3c490fcb",
+        "android_client_info": {
+          "package_name": "com.example.responsi_mp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168213763346-tdcm67pvu8efree62ufgb041ustde2vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYJLKWMIgUyl4KyYf5a8j0Rg1SGYR4hCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168213763346-tdcm67pvu8efree62ufgb041ustde2vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
