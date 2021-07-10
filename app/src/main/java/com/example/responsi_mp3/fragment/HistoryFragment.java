@@ -3,6 +3,7 @@ package com.example.responsi_mp3.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,8 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.responsi_mp3.R;
+import com.example.responsi_mp3.history.History;
 import com.example.responsi_mp3.history.HistoryAdapter;
 import com.example.responsi_mp3.history.HistoryViewModel;
+
+import java.util.ArrayList;
 
 
 public class HistoryFragment extends Fragment implements  {
@@ -32,8 +36,14 @@ public class HistoryFragment extends Fragment implements  {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        historyViewModel = new ViewModelProviders.of(HistoryFragment.this).get(HistoryViewModel.class);
-        historyViewModel.init();
+        historyViewModel = new ViewModelProviders(this).get(HistoryViewModel.class);
+        historyViewModel.getHistorys().observe(getViewLifecycleOwner(), new Observer<ArrayList<History>>() {
+            @Override
+            public void onChanged(ArrayList<History> histories) {
+                historyAdapter.
+
+            }
+        });
 
         historyAdapter = new HistoryAdapter(historyViewModel.getHistorys().getValue());
         recyclerView.setAdapter(historyAdapter);
